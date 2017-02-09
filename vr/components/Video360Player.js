@@ -1,3 +1,9 @@
+/*
+  360 Video ReactVR component
+  Copyright Jacob Michelsen 2017 chromegadget@gmail.com
+  Distributed under the MIT License http://opensource.org/licenses/MIT
+*/
+
 import React from 'react';
 import {
   asset,
@@ -19,9 +25,9 @@ export default class Video360Player extends React.Component {
     return (
       <View
         style={[{
-          layoutOrigin: [0.5, 0, 0],
-          alignItems: 'center',
-        }, this.props.style]}>
+            layoutOrigin: [0.5, 0, 0],
+            alignItems: 'center',
+          }, this.props.style]}>
         <VrButton
           style={{
             backgroundColor: this.state.videoIsPlaying?'red':'green',
@@ -57,3 +63,8 @@ export default class Video360Player extends React.Component {
     );
   }
 };
+
+Video360Player.proptypes = {
+  style: View.propTypes.style,
+  source: React.PropTypes.string.isRequired,
+}

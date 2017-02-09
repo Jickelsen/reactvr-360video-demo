@@ -1,13 +1,13 @@
+/*
+  360 Video three.js scene config
+  Copyright Jacob Michelsen 2017 chromegadget@gmail.com
+  Distributed under the MIT License http://opensource.org/licenses/MIT
+  original three.js scene setup from http://codepen.io/kevinleclair1/pen/gPdqqp
+*/
+
 import {VRInstance} from 'react-vr-web';
 import {Module} from 'react-vr-web';
 import * as THREE from 'three';
-
-// var width = window.innerWidth;
-// var height = window.innerHeight;
-
-// var renderer = new THREE.WebGLRenderer({ antialias: true });
-// renderer.setSize(width, height);
-// document.body.appendChild(renderer.domElement);
 
 export default function Video360ModuleSetup(scene) {
 

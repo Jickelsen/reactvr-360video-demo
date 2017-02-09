@@ -10,12 +10,10 @@ import Video360ModuleSetup from './Video360';
 function init(bundle, parent, options) {
 
   var scene = new THREE.Scene();
-    // var video360Module;
-    // var video360Render;
-    let {video360Module, video360Render} = Video360ModuleSetup(scene);
-    console.log("Is is", video360Render);
+  let {video360Module, video360Render} = Video360ModuleSetup(scene);
+  console.log("Is is", video360Render);
 
-  const vr = new VRInstance(bundle, 'RRMeetupWinter17', parent, {
+  const vr = new VRInstance(bundle, 'ReactVR360VideoDemo', parent, {
     // Add custom options here
     cursorEnabled: true,
     nativeModules: [ video360Module ],
@@ -23,7 +21,7 @@ function init(bundle, parent, options) {
   });
 
   vr.render = function(timestamp) {
-      // Any custom behavior you want to perform on each frame goes here
+    // Any custom behavior you want to perform on each frame goes here
     video360Render(timestamp);
   };
   // Begin the animation loop
